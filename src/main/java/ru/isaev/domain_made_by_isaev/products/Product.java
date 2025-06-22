@@ -27,6 +27,7 @@ public class Product {
     @ManyToOne(fetch = FetchType.EAGER)
     private User owner;
 
+    @Enumerated(EnumType.STRING)
     private Status status;
 
     private String emailOfSupport;

@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.EnumType;
 
 import java.time.LocalDateTime;
 
@@ -19,6 +21,7 @@ public class Notification {
 
     private String titleOfProduct;
 
+    @Enumerated(EnumType.STRING)
     private NotificationMessage message;
 
     private LocalDateTime timestamp;
